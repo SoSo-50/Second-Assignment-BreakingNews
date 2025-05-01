@@ -1,62 +1,47 @@
-# Project Title
+// File: Report.md
+# Breaking News Assignment Report
 
-Simple overview of use/purpose.
+## Introduction
+This project is a simple news aggregator application that fetches real-time news from **NewsAPI** and displays it to the user. The goal of this project is to reinforce object-oriented programming skills, API integration, JSON parsing, and version control with Git.
 
-## Description
+## Completed Tasks
+1. **Project Setup and Git**:
+   - Forked and cloned the repository.
+   - Created a `development` branch for all development work.
 
-An in-depth paragraph about your project and overview of use.
+2. **Implemented Infrastructure Class**:
+   - Implemented the `fetchNews` method using `HttpClient` to send requests to NewsAPI.
+   - Parsed JSON responses using the **Gson** library and converted them into `News` objects.
+   - Added error handling for non-200 status codes and unsuccessful API responses.
 
-## Getting Started
+3. **Designed News Class**:
+   - Designed the `News` class with attributes `title`, `description`, `sourceName`, `author`, `url`, and `publishedAt`.
+   - Implemented the `displayNews` method to show complete news details.
+   - Added getters for accessing attributes for file storage.
 
-### Dependencies
+4. **Implemented Menu in Main Class**:
+   - Created an interactive menu displaying news titles.
+   - Allowed users to select an article to view details.
+   - Added an option to save articles to favorites.
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+5. **Error Handling**:
+   - Handled errors for failed API requests and invalid user inputs.
+   - Replaced null JSON values with default values.
 
-### Installing
+6. **Bonus Task: Save Favorite Articles**:
+   - Implemented functionality to save favorite articles to `favorites.txt` and load them on startup.
+   - Users can view their saved articles.
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+## Challenges
+- **Working with APIs**: Learning to use `HttpClient` and handle JSON responses was challenging. This was resolved by studying documentation and resources.
+- **JSON Parsing**: Handling null values in JSON responses required careful checks. Using `isJsonNull` resolved this issue.
+- **File Storage**: Ensuring proper saving and loading of data in the file required careful format design.
 
-### Executing program
+## Conclusion
+This project provided deep insights into object-oriented programming, API integration, and Git-based project management. Implementing the bonus task enhanced my file handling skills. The code is readable, structured, and well-commented, meeting all project requirements.
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
-## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+## Resources Used
+- [Gson Documentation](https://github.com/google/gson)
+- [Tutorial on Fetching JSON from APIs](https://www.baeldung.com/java-http-client-json)
+- [Guide to Writing READMEs](https://www.makeareadme.com/)
+- Official NewsAPI Documentation
